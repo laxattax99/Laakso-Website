@@ -82,30 +82,19 @@ func getRecentlyPlayed(w http.ResponseWriter, r *http.Request) {
 		trackName := track.Name
 		artistName := track.Artist.Name
 		imageUrl := getLargeImageURL(track.Image)
-		// playDate := track.Date.UTC
-
-		// // Convert UTC date to local time
-		// // playTime, err := time.Parse(time.RFC3339, playDate)
-		// if err != nil {
-		// 	log.Fatal(err)
-		// }
-		// localPlayTime := playTime.Local()
-
 		fmt.Printf("Recently Played Track: %s by %s (%s)\n", trackName, artistName, imageUrl)
 	} else {
 		fmt.Println("No recent tracks found.")
 	}
 
-	// Convert data to JSON
-	// responseJSON, err := json.Marshal(recentTracks)
-	// if err != nil {
-	// 	http.Error(w, err.Error(), http.StatusInternalServerError)
-	// 	return
-	// }
-
-	// w.Header().Set("Content-Type", "application/json")
-	// w.WriteHeader(http.StatusOK)
-	// w.Write(responseJSON)
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	responseJSON, err := json.Marshal(response)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	w.Write(responseJSON)
 }
 
 func getLargeImageURL(images []struct {
