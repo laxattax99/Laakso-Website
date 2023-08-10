@@ -3,12 +3,14 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
+	"github.com/rs/cors"
 )
 
 func main() {
@@ -19,6 +21,15 @@ func main() {
 	}
 
 	router := mux.NewRouter()
+
+	c := cors.New(cors.Options{
+		AllowedOrigins:   []string{"*"}, // This allows all origins
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedHeaders:   []string{"*"},
+		AllowCredentials: true,
+	})
+
+	router.Use(c.Handler)
 
 	router.HandleFunc("/recently-played", getRecentlyPlayed)
 
@@ -53,7 +64,7 @@ func getRecentlyPlayed(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var response struct {
+	var lastFMResponse struct {
 		RecentTracks struct {
 			Track []struct {
 				Name   string `json:"name"`
@@ -71,30 +82,42 @@ func getRecentlyPlayed(w http.ResponseWriter, r *http.Request) {
 		} `json:"recenttracks"`
 	}
 
-	err = json.NewDecoder(resp.Body).Decode(&response)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("Error reading response body:", err)
+		return
 	}
 
-	if len(response.RecentTracks.Track) > 0 {
+	err = json.Unmarshal([]byte(body), &lastFMResponse)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	var response struct {
+		TrackName  string
+		ArtistName string
+		ImageUrl   string
+	}
+
+	if len(lastFMResponse.RecentTracks.Track) > 0 {
 		// Get the most recent track
-		track := response.RecentTracks.Track[0]
+		track := lastFMResponse.RecentTracks.Track[0]
 		trackName := track.Name
 		artistName := track.Artist.Name
 		imageUrl := getLargeImageURL(track.Image)
-		fmt.Printf("Recently Played Track: %s by %s (%s)\n", trackName, artistName, imageUrl)
+		response.TrackName = trackName
+		response.ArtistName = artistName
+		response.ImageUrl = imageUrl
 	} else {
 		fmt.Println("No recent tracks found.")
 	}
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	responseJSON, err := json.Marshal(response)
-	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
-	}
-	w.Write(responseJSON)
+	data, _ := json.Marshal(response)
+	println(string(data))
+	w.Write(data)
 }
 
 func getLargeImageURL(images []struct {
