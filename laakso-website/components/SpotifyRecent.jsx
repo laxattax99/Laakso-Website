@@ -35,8 +35,8 @@ const SpotifyRecent = () => {
         width="300"
         height="300"
       />
-      <p className="text-lg mt-4 p-1">{recentSong.Trackname}</p>
-      <p className="text-lg mt-2 p-1">{recentSong.Artistname}</p>
+      <p className="text-lg mt-4 p-1">{recentSong.TrackName}</p>
+      <p className="text-lg mt-2 p-1">{recentSong.ArtistName}</p>
     </div>
   );
 };
