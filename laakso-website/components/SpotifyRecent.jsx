@@ -2,19 +2,17 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { getRecentlyPlayed } from "@/services/LastFMService";
 const SpotifyRecent = () => {
   const [recentSong, setRecentSong] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getRecentlyPlayed = () => {
-      axios.get("http://localhost:3001/recently-played").then((response) => {
-        const recent = response.data;
-        setRecentSong(recent);
-        setLoading(false);
-      });
-    };
-    getRecentlyPlayed();
+    getRecentlyPlayed()
+    .then( lastFmResponse => {
+      setRecentSong(lastFmResponse);
+      setLoading(false);
+    });
   }, []);
 
   if (loading) {
