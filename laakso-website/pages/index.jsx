@@ -16,10 +16,11 @@ export default function Home() {
         <h1 className="text-6xl font-bold py-4 mb-4">Colin Laakso</h1>
       </div>
       <div className="flex flex-row items-center justify-center bg-gray-100 ">
-        <div className="flex flex-col justify-centers ml-4">
+        <div className="flex flex-col justify-centers ml-4 max-w-lg mx-auto">
           <p className="text-lg text-center mb-6">
-            I am a software engineer with a passion for solving complex
-            problems.
+            My Name is Colin Laakso. I am a software engineer with a passion for solving complex
+            problems. I am based in Brooklyn, New York. I have worked on a combination of engineering teams, including full stack and DevOps rolls.
+            I am currently working at Wood Mackenzie as a Software Engineer. My current work has involved utilizing a vareity of technologies including Azure, .NET, and React.
           </p>
         </div>
       </div>
