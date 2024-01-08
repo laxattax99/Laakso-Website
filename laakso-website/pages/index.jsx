@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center py-4 ml-4">
         <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-lg">
           <Image
-            src="/../public/assets/me_headshot.jpg"
+            src="me_headshot.jpg"
             alt="headshot"
             fill
             style={{ objectFit: "cover", objectPosition: "center 50%" }}
