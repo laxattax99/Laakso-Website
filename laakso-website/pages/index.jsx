@@ -1,4 +1,5 @@
 import SpotifyRecent from "@/components/SpotifyRecent";
+import headshot from "../public/me_headshot.jpg";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center py-4 ml-4">
         <div className="relative w-80 h-80 rounded-full overflow-hidden shadow-lg">
           <Image
-            src="/../public/me_headshot.jpg"
+            src={headshot}
             alt="headshot"
             fill
             style={{ objectFit: "cover", objectPosition: "center 50%" }}
