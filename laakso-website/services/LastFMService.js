@@ -2,7 +2,7 @@ export async function getRecentlyPlayed() {
   const lastfmUsername = process.env.NEXT_PUBLIC_LAST_FM_USERNAME;
   const lastfmAPIKey = process.env.NEXT_PUBLIC_LAST_FM_API_KEY;
   
-  const url = `http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastfmUsername}&api_key=${lastfmAPIKey}&format=json&limit=1`;
+  const url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastfmUsername}&api_key=${lastfmAPIKey}&format=json&limit=1`;
   
   try {
     const response = await fetch(url);
