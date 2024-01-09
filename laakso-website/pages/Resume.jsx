@@ -3,7 +3,7 @@ const Resume = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-2">Colin Laakso</h1>
       <h2 className="text-xl font-semibold mb-2">Full-Stack Engineer</h2>
-      <p>laxattack99@live.com | 978-870-9718</p>
+      <p>laxattack99@live.com</p>
       <p>LinkedIn: colin-laakso | GitHub: laxattax99</p>
       <p>854 Metropolitan Ave, 1B | Brooklyn, NY 11211(willing to relocate)</p>
 
