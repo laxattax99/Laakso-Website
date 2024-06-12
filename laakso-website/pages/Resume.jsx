@@ -3,9 +3,7 @@ const Resume = () => {
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-2">Colin Laakso</h1>
       <h2 className="text-xl font-semibold mb-2">Full-Stack Engineer</h2>
-      <p>laxattack99@live.com</p>
-      <p>LinkedIn: colin-laakso | GitHub: laxattax99</p>
-      <p>854 Metropolitan Ave, 1B | Brooklyn, NY 11211(willing to relocate)</p>
+      <p>colinlax.net | laxattack99@live.com | 978-870-9718</p>
 
       <section className="mt-6">
         <h2 className="text-xl font-bold">Education</h2>
@@ -15,103 +13,84 @@ const Resume = () => {
 
       <section className="mt-6">
         <h2 className="text-xl font-bold">Skills</h2>
-        <p>
-          Java, C#, .NET, Python, JavaScript (React, Angular, Next, Node), Go,
-          C++, C, PowerShell, Processing, SQL (Postgres, SQL Server), MongoDB,
-          Docker, Azure, Octopus, TeamCity, Jenkins, Auth0, Tailwind
-        </p>
+        <p>Languages: C#, .NET, Python, SQL, JavaScript (React, Angular, Next, Node), Java, Go, C++, C, PowerShell</p>
+        <p>Technologies: MongoDB, Docker, Azure, Octopus, TeamCity, Tailwind, Databricks, Auth0</p>
       </section>
 
       <section className="mt-6">
         <h2 className="text-xl font-bold">Experience</h2>
 
         <h3 className="text-lg font-semibold mt-2">
-          Wood Mackenzie, Boston, MA - Aug. 2022 - Present
+          Wood Mackenzie, Boston, MA & New York, NY - Aug. 2022 – May 2024
         </h3>
-        <p>Software Engineer I</p>
+        <p>Software Engineer | Short Term Power</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Took initiative in rebuilding a discontinued web app from scratch,
-            which enabled Wood Mackenzie analysts to create and view custom
-            alerts for monitoring the output of power plants.
+            Improved the process of collecting inputs to a new Python-based predictive ML wind model for wind forecasting, streamlined the output process, and deployed the model to Databricks where I set up scheduling for both training and wind forecast generation. This deployment increased the model's training speed and scalability, while also serving more accurate wind generation forecasts to clients.
           </li>
           <li>
-            Expanded Power APIs to include a wide range of historical power
-            plant data going back up to two years while utilizing time triggered
-            azure functions to keep these records up to date.
+            Spearheaded the complete rebuild of a discontinued web app using PostgreSQL, .NET, and React, enabling analysts to create/view custom alerts for power plant monitoring, which they had been unable to do since 2018.
           </li>
           <li>
-            Utilized legacy SSIS packages and Azure functions to create new ETL
-            jobs that provided generator availability data to new EU power API
-            endpoints.
+            Expanded .NET-based Power APIs by integrating time-triggered Azure functions to collect historical power plant data from internal SQL databases, resulting in more comprehensive data availability for clients.
+          </li>
+          <li>
+            Designed new .NET and Azure function based ETL jobs to replace legacy SQL SSIS packages, enhancing data infrastructure scalability and adding crucial generator data to our APIs for clients to view generator availability.
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          MORSE Corp, Cambridge, MA - 2021
+          ALTO Visuals, Los Angeles, CA - Feb. 2024 – May 2024
         </h3>
-        <p>Software Engineer Co-op</p>
+        <p>Project Lead | Treatment Feedback</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Created a containerized API and Mongo database to keep a history of
-            missions created for Airdrop Mission Planning (AMP).
-          </li>
-          <li>
-            Improved systems of the Docker backend for AMP that included
-            integration testing, Monte Carlo simulations, and APIs for mission
-            calculation.
-          </li>
-          <li>
-            Implemented new features to the .NET servers behind older AMP
-            infrastructure to improve routing and overall performance.
+            Architected a scalable, container-based web app for analyzing marketing documents, providing AI-generated creative feedback using OpenAI, reshaping client marketing strategies.
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          Avigilon, a Motorola Solutions Company, Somerville, MA - 2020
+          MORSE Corp, Cambridge, MA - Jan. 2021 – Jul. 2021
         </h3>
-        <p>Cloud Services Engineer Co-op</p>
+        <p>Software Engineer | Airdrop Mission Planning</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Designed, implemented, and tested an automated function in Azure to
-            collect diagnostics data from cameras to check 3rd party camera
-            compatibility with Avigilon’s proprietary software.
+            Developed a containerized API in Python and a MongoDB database to maintain a history of missions for Airdrop Mission Planning (AMP), giving clients more comprehensive mission information.
           </li>
           <li>
-            Automated a monthly report regarding the prices of Azure resources
-            to highlight overspending, ultimately reducing costs.
+            Added new endpoints and features to older mission planning infrastructure written in C#, enhancing the functionality and extending the capabilities of existing mission planning and calculation APIs.
+          </li>
+          <li>
+            Contributed to backend systems for AMP, including integration testing and mission calculation APIs, doubling test coverage and adding more options for clients to simulate missions.
           </li>
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          Milliman Financial Risk Management, Hudson, MA - 2019
+          Avigilon, a Motorola Solutions Company, Somerville, MA - Jan. 2020 – Sep. 2020
         </h3>
-        <p>Software Developer Co-op</p>
+        <p>Cloud Services Engineer | DevOps and Full-Stack Teams</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Developed Software for servers in Milliman’s cloud computing
-            infrastructure (CCI) to allow compatibility between Milliman cloud
-            computing jobs and Microsoft Azure.
+            Designed and implemented an automated Azure job in C# to collect diagnostics data from cameras to check third-party camera compatibility with Avigilon’s proprietary software, allowing Avigilon to report to customers which third party cameras they were able to incorporate into their camera networks.
           </li>
           <li>
-            Created new security features for older parts of Milliman’s CCI
-            allowing better encryption mechanisms between client and server.
+            Automated a C# based Azure job to generate a monthly report regarding the prices of Azure resources to highlight overspending, ultimately reducing cloud costs by around 30%.
+          </li>
+          <li>
+            Collaborated with project managers to implement new UI features using React, enhancing and expanding the user interface of our Avigilon website. Additionally, streamlined CI/CD pipelines with PowerShell in the DevOps team to improve deployment efficiency and reliability on Azure.
           </li>
         </ul>
-      </section>
 
-      <section className="mt-6">
-        <h2 className="text-xl font-bold">Personal Projects</h2>
+        <h3 className="text-lg font-semibold mt-2">
+          Milliman Financial Risk Management, Hudson, MA - Jan. 2019 – Jul. 2019
+        </h3>
+        <p>Software Developer | Cloud Team</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Created version of the Arcade game Asteroids in Java and coded an
-            artificial intelligence to play it using a neuro-evolution
-            algorithm.
+            Developed a Gateway for Milliman’s cloud computing infrastructure (CCI) to allow compatibility between Milliman cloud computing jobs and Microsoft Azure, while also implementing single sign on for CCI using impersonation.
           </li>
           <li>
-            Recreated the arcade game Missile Command using JavaScript and
-            implemented a neuro-evolution algorithm to teach an AI how to play
-            the game.
+            Collaborated with colleagues on an application that mirrored files on an FTP server with a client’s local file system while maintaining revision numbers for each file.
           </li>
         </ul>
       </section>
