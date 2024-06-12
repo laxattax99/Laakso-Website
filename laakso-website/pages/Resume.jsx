@@ -26,7 +26,7 @@ const Resume = () => {
         <p>Software Engineer | Short Term Power</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Improved the process of collecting inputs to a new Python-based predictive ML wind model for wind forecasting, streamlined the output process, and deployed the model to Databricks where I set up scheduling for both training and wind forecast generation. This deployment increased the model's training speed and scalability, while also serving more accurate wind generation forecasts to clients.
+            Improved the process of collecting inputs to a new Python-based predictive ML wind model for wind forecasting, streamlined the output process, and deployed the model to Databricks where I set up scheduling for both training and wind forecast generation. This deployment increased the model&apos;s training speed and scalability, while also serving more accurate wind generation forecasts to clients.
           </li>
           <li>
             Spearheaded the complete rebuild of a discontinued web app using PostgreSQL, .NET, and React, enabling analysts to create/view custom alerts for power plant monitoring, which they had been unable to do since 2018.
@@ -71,7 +71,7 @@ const Resume = () => {
         <p>Cloud Services Engineer | DevOps and Full-Stack Teams</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Designed and implemented an automated Azure job in C# to collect diagnostics data from cameras to check third-party camera compatibility with Avigilon's proprietary software, allowing Avigilon to report to customers which third party cameras they were able to incorporate into their camera networks.
+            Designed and implemented an automated Azure job in C# to collect diagnostics data from cameras to check third-party camera compatibility with Avigilon&apos;s proprietary software, allowing Avigilon to report to customers which third party cameras they were able to incorporate into their camera networks.
           </li>
           <li>
             Automated a C# based Azure job to generate a monthly report regarding the prices of Azure resources to highlight overspending, ultimately reducing cloud costs by around 30%.
@@ -87,10 +87,10 @@ const Resume = () => {
         <p>Software Developer | Cloud Team</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Developed a Gateway for Milliman's cloud computing infrastructure (CCI) to allow compatibility between Milliman cloud computing jobs and Microsoft Azure, while also implementing single sign on for CCI using impersonation.
+            Developed a Gateway for Milliman&apos;s cloud computing infrastructure (CCI) to allow compatibility between Milliman cloud computing jobs and Microsoft Azure, while also implementing single sign on for CCI using impersonation.
           </li>
           <li>
-            Collaborated with colleagues on an application that mirrored files on an FTP server with a client's local file system while maintaining revision numbers for each file.
+            Collaborated with colleagues on an application that mirrored files on an FTP server with a client&apos;s local file system while maintaining revision numbers for each file.
           </li>
         </ul>
       </section>
