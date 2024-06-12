@@ -7,7 +7,7 @@ const Resume = () => {
 
       <section className="mt-6">
         <h2 className="text-xl font-bold">Education</h2>
-        <p>Northeastern University, Boston, MA - Sep. 2017 – May 2022</p>
+        <p>Northeastern University, Boston, MA - Sep. 2017 - May 2022</p>
         <p>Bachelor of Science in Computer Science, cum laude</p>
       </section>
 
@@ -21,7 +21,7 @@ const Resume = () => {
         <h2 className="text-xl font-bold">Experience</h2>
 
         <h3 className="text-lg font-semibold mt-2">
-          Wood Mackenzie, Boston, MA & New York, NY - Aug. 2022 – May 2024
+          Wood Mackenzie, Boston, MA & New York, NY - Aug. 2022 - May 2024
         </h3>
         <p>Software Engineer | Short Term Power</p>
         <ul className="list-disc list-inside mt-2">
@@ -40,7 +40,7 @@ const Resume = () => {
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          ALTO Visuals, Los Angeles, CA - Feb. 2024 – May 2024
+          ALTO Visuals, Los Angeles, CA - Feb. 2024 - May 2024
         </h3>
         <p>Project Lead | Treatment Feedback</p>
         <ul className="list-disc list-inside mt-2">
@@ -50,7 +50,7 @@ const Resume = () => {
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          MORSE Corp, Cambridge, MA - Jan. 2021 – Jul. 2021
+          MORSE Corp, Cambridge, MA - Jan. 2021 - Jul. 2021
         </h3>
         <p>Software Engineer | Airdrop Mission Planning</p>
         <ul className="list-disc list-inside mt-2">
@@ -66,12 +66,12 @@ const Resume = () => {
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          Avigilon, a Motorola Solutions Company, Somerville, MA - Jan. 2020 – Sep. 2020
+          Avigilon, a Motorola Solutions Company, Somerville, MA - Jan. 2020 - Sep. 2020
         </h3>
         <p>Cloud Services Engineer | DevOps and Full-Stack Teams</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Designed and implemented an automated Azure job in C# to collect diagnostics data from cameras to check third-party camera compatibility with Avigilon’s proprietary software, allowing Avigilon to report to customers which third party cameras they were able to incorporate into their camera networks.
+            Designed and implemented an automated Azure job in C# to collect diagnostics data from cameras to check third-party camera compatibility with Avigilon's proprietary software, allowing Avigilon to report to customers which third party cameras they were able to incorporate into their camera networks.
           </li>
           <li>
             Automated a C# based Azure job to generate a monthly report regarding the prices of Azure resources to highlight overspending, ultimately reducing cloud costs by around 30%.
@@ -82,15 +82,15 @@ const Resume = () => {
         </ul>
 
         <h3 className="text-lg font-semibold mt-2">
-          Milliman Financial Risk Management, Hudson, MA - Jan. 2019 – Jul. 2019
+          Milliman Financial Risk Management, Hudson, MA - Jan. 2019 - Jul. 2019
         </h3>
         <p>Software Developer | Cloud Team</p>
         <ul className="list-disc list-inside mt-2">
           <li>
-            Developed a Gateway for Milliman’s cloud computing infrastructure (CCI) to allow compatibility between Milliman cloud computing jobs and Microsoft Azure, while also implementing single sign on for CCI using impersonation.
+            Developed a Gateway for Milliman's cloud computing infrastructure (CCI) to allow compatibility between Milliman cloud computing jobs and Microsoft Azure, while also implementing single sign on for CCI using impersonation.
           </li>
           <li>
-            Collaborated with colleagues on an application that mirrored files on an FTP server with a client’s local file system while maintaining revision numbers for each file.
+            Collaborated with colleagues on an application that mirrored files on an FTP server with a client's local file system while maintaining revision numbers for each file.
           </li>
         </ul>
       </section>
