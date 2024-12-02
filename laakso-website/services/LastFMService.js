@@ -6,7 +6,6 @@ export async function getRecentlyPlayed() {
   
   try {
     const response = await fetch(url);
-    console.log(response)
     const lastFMResponse = await response.json();
 
     const responseData = {
@@ -17,6 +16,7 @@ export async function getRecentlyPlayed() {
 
     if (lastFMResponse.recenttracks.track.length > 0) {
       const track = lastFMResponse.recenttracks.track[0];
+      console.log(track);
       responseData.TrackName = track.name;
       responseData.ArtistName = track.artist["#text"];
       responseData.ImageUrl = getLargeImageURL(track.image);

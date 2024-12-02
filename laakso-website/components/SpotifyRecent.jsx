@@ -24,17 +24,17 @@ const SpotifyRecent = () => {
   }
 
   return (
-    <div className="flex flex-col items-start m-4 p-4">
+    <div className="h-screen flex flex-col justify-center items-center m-4 p-4">
       <h2 className="text-4xl font-bold mb-4">Listening to:</h2>
       <Image
-        className="shadow-lg"
+        className="shadow-lg rounded-lg"
         src={recentSong.ImageUrl}
         alt="trackimage"
         width="300"
         height="300"
       />
-      <p className="text-lg mt-4 p-1">{recentSong.TrackName}</p>
-      <p className="text-lg mt-2 p-1">{recentSong.ArtistName}</p>
+      <p className="text-2xl mt-6 font-semibold">{recentSong.TrackName}</p>
+      <p className="text-xl mt-2 text-gray-600">{recentSong.ArtistName}</p>
     </div>
   );
 };
