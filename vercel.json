@@ -1,7 +1,6 @@
 {
-  "buildCommand": "cd laakso-website && npm run build",
-  "devCommand": "cd laakso-website && npm run dev",
-  "installCommand": "cd laakso-website && npm install",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": "laakso-website/.next"
+  "cwd": "laakso-website"
 }
