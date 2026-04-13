@@ -20,8 +20,7 @@ export default function Home() {
         <div className="max-w-xs sm:max-w-lg mx-auto">
           <p className="text-lg text-center mb-6">
             My Name is Colin Laakso. I am a software engineer with a passion for solving complex
-            problems. I am based in Brooklyn, New York. I have worked on a combination of engineering teams, including full stack and DevOps roles.
-            I am currently working at Wood Mackenzie as a Software Engineer. My current work has involved utilizing a variety of technologies including Azure, .NET, and React.
+            problems. I am based in Brooklyn, New York. 
           </p>
         </div>
       </div>
